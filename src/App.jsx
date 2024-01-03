@@ -1,20 +1,18 @@
-import userContextProvider  from "./context/userContextProvider"
-import './App.css'
-import './index.css'
-import Login from "./components/Login"
-import Profile from "./components/Profile"
 
+import './App.css'
+import Login from './components/Login'
+import Profile from './components/Profile'
+import UserContextProvider from './context/UserContextProvider'
 
 function App() {
   
+
   return (
-    <>
-        <userContextProvider>
-          <div>Hello world</div>
-          <Login/>
-          <Profile/>
-        </userContextProvider>
-    </>
+    <UserContextProvider>
+      <h1>testing context API's</h1>
+      <Login />
+      <Profile />
+    </UserContextProvider>
   )
 }
 
